@@ -153,6 +153,10 @@ namespace CSharpHelloWorld
             MyFunction();
             Console.WriteLine( MyFunctionWithReturn(12) );
 
+            Console.WriteLine("---------");
+            var myClass = new MyClass("MyName");
+            Console.WriteLine( myClass.MyName );
+
         }
 
         // ? Funciones
@@ -165,9 +169,19 @@ namespace CSharpHelloWorld
         {
             return 10 + param;
         }
+
+        class MyClass 
+        {
+            // * Es una propiedad pública de tipo string
+            public string MyName { get; set; }
+
+            // * Constructor
+            public MyClass( string myCurrentName ) 
+            {
+                MyName = myCurrentName;
+            }
+        }
     }
-
-
 
 }
 
